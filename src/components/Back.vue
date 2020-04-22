@@ -4,13 +4,13 @@
             <div class="card-header" :id="'ab'+index">
                 <h5 class="mb-0">
                     <a class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" :data-target="'#'+'a'+index" aria-expanded="false" :aria-controls="'a'+index">
-                        Version 1.1
+                        {{ release.title }} - V{{ release.version }}
                     </a>
                 </h5>
             </div>
             <div :id="'a'+index" class="collapse" :aria-labelledby="'a'+index" :data-parent="'#'+'ab'+index">
                 <div class="card-body">
-                    <p>Création d'un utilisateur Cuisinier</p>
+                    <p>{{ release.patch_notes }}</p>
                     <i type="button" href="#" class="icon-cloud-download" style="font-size: 28px;"></i>
                 </div>
             </div>
