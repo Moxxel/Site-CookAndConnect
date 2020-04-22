@@ -29,19 +29,21 @@
 
             <div class="modal-body">
               <h4>Merci d'entrer le mot de passe que vous avez reçu par mail.</h4>
-              <div class="form-group d-flex">
-                <label class="col-4" for="exampleInputPassword1">Mot de passe</label>
-                <input type="password" class="form-control col-8" id="exampleInputPassword1" v-model="activePassword" placeholder="**********">
-              </div>
-              <div class="message-wrapper">
-                <span>
-                  <template v-if="success === true">Mot de passe correct !</template>
-                  <template v-else-if="success === false">Mot de passe incorrect, réessayez !</template>
-                </span>
-                <img class="spinner" v-if="isLoading" :src="require('@/assets/spinner.gif')" alt="spinner">
-              </div>
-              
-              <button type="submit" class="btn-submit-modal btn btn-primary js-send" @click="validate()">Valider</button>
+              <form>
+                <div class="form-group d-flex">
+                  <label class="col-4" for="exampleInputPassword1">Mot de passe</label>
+                  <input type="password" class="form-control col-8" id="exampleInputPassword1" v-model="activePassword" placeholder="**********">
+                </div>
+                <div class="message-wrapper">
+                  <span>
+                    <template v-if="success === true">Mot de passe correct !</template>
+                    <template v-else-if="success === false">Mot de passe incorrect, réessayez !</template>
+                  </span>
+                  <img class="spinner" v-if="isLoading" :src="require('@/assets/spinner.gif')" alt="spinner">
+                </div>
+                
+                <button type="submit" class="btn-submit-modal btn btn-primary js-send" @click="validate()">Valider</button>
+              </form>
             </div>
             
           </template>
