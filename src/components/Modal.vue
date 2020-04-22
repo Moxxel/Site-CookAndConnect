@@ -47,12 +47,10 @@
             </div>
             
           </template>
-
           <!-- On est connecté -->
           <template v-else>
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Choisissez votre Version</h5>
-              
               <button @click="toggleModal()"
                 type="button"
                 class="close exit-js"
@@ -62,63 +60,15 @@
                 <span style="font-size: 40px;font-weight: 300;" aria-hidden="true">&times;</span>
               </button>
             </div>
-
             <div class="modal-body">
               <div class="accordion" id="accordionExample" style="width:100%;">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link version-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Version 1.2
-                      </button>
-                    </h5>
-                  </div>
-
-                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <p>Ajout d'une liste de courses pour auto-incrémenter votre liste d'ingédients</p>
-                      <i type="button" href="#" class="icon-cloud-download" style="font-size: 28px;"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Version 1.1
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <p>Création d'un utilisateur Cuisinier</p>
-                      <i type="button" href="#" class="icon-cloud-download" style="font-size: 28px;"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Version 1.0
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <p>Création de l'application Cook&Connect</p>
-                      <i type="button" href="#" class="icon-cloud-download" style="font-size: 28px;"></i>
-                    </div>
-                  </div>
-                </div>
+                <Back />
               </div>
             </div>
           </template>
         </div>
       </div>
     </div>
-    <!-- Modal List -->
-    <Back />
   </div>
 </template>
 
@@ -185,6 +135,7 @@ export default {
           //   $('.modal-title-after').css('display', 'flex');
           // }, 1000)
           this.$store.commit('setPassword', this.activePassword)
+          
         } else {
           this.success = false
         }

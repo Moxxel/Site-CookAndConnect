@@ -3,21 +3,25 @@
         {
             "title": "Minor Release",
             "version": "3.0.1",
+            "patch_notes": "Reduce minor bugs",
             "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.3.0.1.apk"
         },
         {
             "title": "Third Release",
             "version": "3.0.0",
+            "patch_notes": "Add world",
             "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.3.0.0.apk"
         },
         {
             "title": "Second Release",
             "version": "2.0.0",
+            "patch_notes": "Add boring things",
             "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.2.0.0.apk"
         },
         {
             "title": "First Release",
             "version": "1.0.0",
+            "patch_notes": "Initial App",
             "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.1.0.0.apk"
         }
     ]
