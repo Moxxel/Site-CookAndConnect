@@ -1,0 +1,9 @@
+{
+    "releases": {
+        "1": {
+            "title": "First Release",
+            "version": "0.1",
+            "download_link": "dddd"
+        }
+    }
+}

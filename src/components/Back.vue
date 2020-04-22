@@ -1,6 +1,6 @@
 <template>
     <div style="display: flex;">
-        Bam !{{password}}
+        {{password}}
     </div>
 </template>
 
@@ -13,9 +13,8 @@ export default {
         }
     },
     methods: {
-        setPassword(password) {
-        console.log(password);
-        this.$store.commit('setPassword', password)
+        getReleaseJson: function () {
+            
         }
     }
 };
