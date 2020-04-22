@@ -1,9 +1,24 @@
 {
-    "releases": {
-        "1": {
+    "releases": [
+        {
+            "title": "Minor Release",
+            "version": "3.0.1",
+            "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.3.0.1.apk"
+        },
+        {
+            "title": "Third Release",
+            "version": "3.0.0",
+            "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.3.0.0.apk"
+        },
+        {
+            "title": "Second Release",
+            "version": "2.0.0",
+            "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.2.0.0.apk"
+        },
+        {
             "title": "First Release",
-            "version": "0.1",
-            "download_link": "dddd"
+            "version": "1.0.0",
+            "download_link": "https://services.cook-and-connect.aioa.fr/apk/cook-and-connect.1.0.0.apk"
         }
-    }
+    ]
 }

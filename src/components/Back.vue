@@ -7,6 +7,11 @@
 <script>
 export default {
     name: 'Back',
+    data() {
+        return {
+            releaseJsonUrl: "https://raw.githubusercontent.com/Moxxel/CookAndConnect/dev/apk/release.json"
+        };
+    },
     computed: {
         password () {
         return this.$store.state.password
@@ -14,6 +19,7 @@ export default {
     },
     methods: {
         getReleaseJson: function () {
+            // Requête ajax pour récuprer le json
             
         }
     }
