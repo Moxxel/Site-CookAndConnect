@@ -32,7 +32,7 @@
               <form>
                 <div class="form-group d-flex">
                   <label class="col-4" for="exampleInputPassword1">Mot de passe</label>
-                  <input type="password" class="form-control col-8" id="exampleInputPassword1" v-model="activePassword" placeholder="**********">
+                  <input ref="password" type="password" class="form-control col-8" id="exampleInputPassword1" v-model="activePassword" placeholder="**********">
                 </div>
                 <div class="message-wrapper">
                   <span>
@@ -101,6 +101,12 @@ export default {
       this.isModalActive = !this.isModalActive
       this.success = undefined
       this.isLoading = false
+      if (this.isModalActive ) {
+        setTimeout(() => {
+          this.$nextTick(() => this.$refs.password.focus())
+        }, 1000);
+      }
+      
     },
     validate: function () {
       this.isLoading = true
