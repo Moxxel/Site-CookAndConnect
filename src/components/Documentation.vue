@@ -32,7 +32,7 @@ export default {
     }
     > ul {
         margin: 1rem 0rem;
-        text-align: left;
+        text-align: center;
         list-style: circle;
         > li {
             font-size: 18px;
