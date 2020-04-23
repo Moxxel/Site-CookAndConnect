@@ -1,17 +1,17 @@
 <template>
-    <div>
+    <div class="accordion" id="accordionExample">
         <div v-for="(release, index) in releases" :key="index" class="card">
             <div class="card-header" :id="'ab'+index">
                 <h5 class="mb-0">
-                    <a class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" :data-target="'#'+'a'+index" aria-expanded="false" :aria-controls="'a'+index">
-                        {{ release.title }} - V{{ release.version }}
+                    <a class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" :data-target="'#'+'a'+index" data-parent="#accordionExample">
+                        <span>{{ release.title }}</span> <span>- V{{ release.version }}</span>
                     </a>
                 </h5>
             </div>
             <div :id="'a'+index" class="collapse" :aria-labelledby="'a'+index" :data-parent="'#'+'ab'+index">
                 <div class="card-body">
                     <p>{{ release.patch_notes }}</p>
-                    <i type="button" href="#" class="icon-cloud-download" style="font-size: 28px;"></i>
+                    <i type="button" href="#" class="icon-cloud-download"></i>
                 </div>
             </div>
         </div>
@@ -62,11 +62,17 @@ export default {
     color: #c4ad99;
     transition: all 0.5s ease;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
 }
 .version-link:hover {
     background-color: rgba(#c4ad99, 0.5);
     color: #fff;
     transition: all 0.5s ease;
+}
+.icon-cloud-download {
+    background-color: transparent;
+    font-size: 28px;
 }
 .card-body {
     display: flex;

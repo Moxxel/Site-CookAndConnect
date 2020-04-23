@@ -61,9 +61,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="accordion" id="accordionExample" style="width:100%;">
-                <Back />
-              </div>
+              <Back />
             </div>
           </template>
         </div>
