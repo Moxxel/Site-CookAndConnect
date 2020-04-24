@@ -5,13 +5,12 @@
             <h3>Les étapes de l'installation</h3>
                 <ul>
                     <li>Accédez a cette page avec votre téléphone</li>
-                    <li>Cliquez "Télécharger l'application"</li>
+                    <li>Cliquez sur "Télécharger l'application"</li>
                     <li>Lancez le fichier téléchargé</li>
-                    <li>Si une pop up "Installation depuis source inconnue" apparait : Selectionnez "Parametres" sur la pop up > Puis cocher la case "Activer sources inconnues"
-                        <a href="#"  data-toggle="popover" data-img="" title="Source inconnue" >Exemple en image</a>
-                    </li>
-                    <li>Cliquez "Installer"</li>
-                    <li>Votre application apparait désormais dans votre menu et vous pouvez désormais en profiter</li>
+                    <li>Si une PopUp "Installation depuis source inconnue" apparait : </br>
+                        <span style="margin-left:1.5rem">Sélectionnez "Paramètres" sur la PopUp > Puis cocher la case "Activer sources inconnues"</span></li>
+                    <li>Cliquez sur "Installer"</li>
+                    <li>Votre application apparait désormais dans votre menu.</li>
                 </ul>
             </div>
             
@@ -48,14 +47,18 @@ h1 {
   background-color: #c4ad99;
   color: #ecedf1;
 }
+.stape {
+    margin-top: 0;
+}
 .real-stape {
     padding-top: 2rem;
     text-align: left;
+    line-height: 40px;
     > h3 {
         text-align: center;
     }
     > ul {
-        list-style: circle;
+        list-style: none;
     } 
 }
 </style>

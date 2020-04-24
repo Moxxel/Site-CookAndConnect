@@ -25,15 +25,14 @@ export default {
 
 <style scoped lang="less">
 .stape {
-    margin: 1rem 0rem;
+    margin-top: 1rem;
     > h3 {
         font-size: 28px;
         font-weight: normal;
     }
     > ul {
-        margin: 1rem 0rem;
         text-align: center;
-        list-style: circle;
+        list-style: none;
         > li {
             font-size: 18px;
         }

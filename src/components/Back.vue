@@ -1,26 +1,12 @@
 <template>
-            <!-- <div class="card-header" :id="'ab'+index">
-                <h5 class="mb-0">
-                    <a class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" :data-target="'#'+'a'+index" data-parent="#accordionExample">
-                        <span>{{ release.title }}</span> <span>V{{ release.version }}</span>
-                    </a>
-                </h5>
-            </div>
-            <div :id="'a'+index" class="collapse" :aria-labelledby="'ab'+index" :data-parent="'#'+'ab'+index">
-                <div class="card-body">
-                    <p>{{ release.patch_notes }}</p>
-                    <a :href="release.download_link"><i type="button" class="icon-cloud-download" style="font-size: 28px;"></i></a>
-                </div>
-            </div>
-        </div> -->
     <div role="tablist">
         <b-card v-for="(release, index) in releases" :key="index" no-body class="mb-1">
             <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block href="#" v-b-toggle="'accordion-'+index" variant="info"><span>{{ release.title }}</span> <span>V{{ release.version }}</span></b-button>
+                <b-button block href="#" v-b-toggle="'accordion-'+index" variant="info" style="background-color:#c4ad99; border-color:#c4ad99;display:flex; justify-content:space-between;"><span>{{ release.title }}</span> <span>V{{ release.version }}</span></b-button>
             </b-card-header>
             <b-collapse :id="'accordion-'+index" accordion="my-accordion" role="tabpanel">
                 <b-card-body>
-                    <b-card-text>
+                    <b-card-text >
                         <p>{{ release.patch_notes }}</p>
                         <a :href="release.download_link"><i type="button" class="icon-cloud-download" style="font-size: 28px;"></i></a>
                     </b-card-text>
@@ -65,6 +51,7 @@ export default {
 <style scoped lang="less">
 .card-header {
     padding: 0;
+    border-bottom: none;
 }
 .version-link {
     width: 100%;
@@ -86,6 +73,9 @@ export default {
     background-color: transparent;
     font-size: 28px;
 }
+.icon-cloud-download:hover {
+    text-decoration: none;
+}
 .card-body {
     display: flex;
     justify-content: space-between ;
@@ -93,8 +83,14 @@ export default {
     > p {
         margin-bottom: 0;
         font-size: 16px;
-        margin-right: 3rem;
         text-align: left;
+        display:flex; 
+        justify-content: space-between; 
+        width:100%;
     }
+}
+.card {
+    border:none;
+    background-color: transparent;
 }
 </style>

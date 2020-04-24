@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ name }}</h1>
-    <Modal />
     <Carousel />
+    <Modal />
     <Documentation />
   </div>
 </template>
@@ -43,5 +43,6 @@ h1 {
   padding: 1rem 0rem;
   background-color: #c4ad99;
   color: #ecedf1;
+  margin-bottom: 0;
 }
 </style>

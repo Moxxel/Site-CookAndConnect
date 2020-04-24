@@ -1,18 +1,8 @@
 <template>
     <div class="body-wrapper">
-        <div class="description">
-            <p>
-                Créez des recettes par jour, Les cuisiniers auront <strong>les étapes de la recette sur la tablette</strong>.
-                Modifiez en temps réel vos recettes. 
-            </p>
-            <p>
-                L'application Cook&connect va s'occuper de vos <strong>stocks</strong>. Elle peut même vous proposer 
-                une <strong>liste de courses</strong> permanente et simple d'utilisation.
-            </p>
-        </div>
-        <div class="catch-phrase container">
+        <!-- <div class="catch-phrase container">
             <h2>L'application indespensable dans les cuisines</h2>
-        </div>
+        </div> -->
         <div class="image-wrapper">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -35,6 +25,17 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div>
+        
+        <div class="description">
+            <p>
+                Créez des recettes par jour, Les cuisiniers auront <strong>les étapes de la recette sur la tablette</strong>.
+                Modifiez en temps réel vos recettes. 
+            </p>
+            <p>
+                L'application Cook&connect va s'occuper de vos <strong>stocks</strong>. Elle peut même vous proposer 
+                une <strong>liste de courses</strong> permanente et simple d'utilisation.
+            </p>
         </div>
     </div>
 </template>
@@ -91,10 +92,11 @@ button:hover {
     justify-content: space-around;
     align-items: center;
     > p {
-        padding: 0rem 2rem;
+        padding: 1rem 2rem;
         font-size:18px;
         color: #212121;
         font-weight: normal;
+        margin-bottom: 0;
     }
 }
 .catch-phrase {
