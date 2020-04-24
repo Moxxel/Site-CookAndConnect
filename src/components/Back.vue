@@ -38,7 +38,6 @@ export default {
                 method: 'GET'
             }).done((response) => {
                 this.releases = JSON.parse(response).releases;
-                console.log(this.releases)
             })
         }
     },
