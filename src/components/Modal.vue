@@ -99,16 +99,14 @@ export default {
       this.isModalActive = !this.isModalActive
       this.success = undefined
       this.isLoading = false
-      if (this.isModalActive ) {
+      if (this.isModalActive) {
         setTimeout(() => {
           this.$nextTick(() => this.$refs.password.focus())
-        }, 1000);
+        }, 500);
       }
-      
     },
     validate: function () {
       this.isLoading = true
-
       var apiUrl = "https://services.cook-and-connect.aioa.fr/check-password.php";
       var hash = "$2b$06$75BmGlZVqfTdqM39A7.1OuzdmfJqCaG5hfkeO2760xfLMuVYLupjW";
       var datas = {
@@ -127,19 +125,9 @@ export default {
         data: datas,
       }).done((response) => {
         this.isLoading = false
-
         if (response.ok) {
           this.success = true
-          // setTimeout(function() {
-          //   // Enregistrer l'authentification en session ou dans un cookie
-          //   $('button.close-js').click();
-          //   $('.modal-body').css('display', 'none');
-          //   $('.modal-title').css('display', 'none');
-          //   $('.modal-body-after').css('display', 'flex');
-          //   $('.modal-title-after').css('display', 'flex');
-          // }, 1000)
           this.$store.commit('setPassword', this.activePassword)
-          
         } else {
           this.success = false
         }

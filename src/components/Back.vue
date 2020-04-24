@@ -1,20 +1,32 @@
 <template>
-    <div class="accordion" id="accordionExample">
-        <div v-for="(release, index) in releases" :key="index" class="card">
-            <div class="card-header" :id="'ab'+index">
+            <!-- <div class="card-header" :id="'ab'+index">
                 <h5 class="mb-0">
                     <a class="btn btn-link collapsed version-link" type="button" data-toggle="collapse" :data-target="'#'+'a'+index" data-parent="#accordionExample">
-                        <span>{{ release.title }}</span> <span>- V{{ release.version }}</span>
+                        <span>{{ release.title }}</span> <span>V{{ release.version }}</span>
                     </a>
                 </h5>
             </div>
-            <div :id="'a'+index" class="collapse" :aria-labelledby="'a'+index" :data-parent="'#'+'ab'+index">
+            <div :id="'a'+index" class="collapse" :aria-labelledby="'ab'+index" :data-parent="'#'+'ab'+index">
                 <div class="card-body">
                     <p>{{ release.patch_notes }}</p>
-                    <i type="button" href="#" class="icon-cloud-download"></i>
+                    <a :href="release.download_link"><i type="button" class="icon-cloud-download" style="font-size: 28px;"></i></a>
                 </div>
             </div>
-        </div>
+        </div> -->
+    <div role="tablist">
+        <b-card v-for="(release, index) in releases" :key="index" no-body class="mb-1">
+            <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block href="#" v-b-toggle="'accordion-'+index" variant="info"><span>{{ release.title }}</span> <span>V{{ release.version }}</span></b-button>
+            </b-card-header>
+            <b-collapse :id="'accordion-'+index" accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                    <b-card-text>
+                        <p>{{ release.patch_notes }}</p>
+                        <a :href="release.download_link"><i type="button" class="icon-cloud-download" style="font-size: 28px;"></i></a>
+                    </b-card-text>
+                </b-card-body>
+            </b-collapse>
+        </b-card>
     </div>
 </template>
 

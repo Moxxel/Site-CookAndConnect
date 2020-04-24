@@ -6,12 +6,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@popperjs/core";
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap-vue/dist/bootstrap-vue";
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import Vuex from "vuex";
 import "es6-promise/auto";
+import Vue from 'vue';
+import App from './App';
+import router from './router';
+import VueCryptojs from "vue-cryptojs";
+import Vuex from "vuex";
 
+Vue.use(VueCryptojs);
 Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
