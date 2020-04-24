@@ -41,7 +41,7 @@ export default {
             })
         },
         getDecryptedString: function (data) {
-            return this.$CryptoJS.AES.decrypt(data, this.password).toString(this.$CryptoJS.enc.utf8)
+            return this.$CryptoJS.AES.decrypt(data, this.password).toString(this.$CryptoJS.enc.Utf8)
         }
     },
     mounted () {
