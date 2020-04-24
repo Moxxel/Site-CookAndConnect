@@ -8,7 +8,7 @@
                 <b-card-body>
                     <b-card-text >
                         <p>{{ release.patch_notes }}</p>
-                        <a :href="release.download_link"><i type="button" class="icon-cloud-download" style="font-size: 28px;"></i></a>
+                        <a :href="getDecryptedString(release.download_link)"><i type="button" class="icon-cloud-download" style="font-size: 28px;"></i></a>
                     </b-card-text>
                 </b-card-body>
             </b-collapse>
@@ -39,6 +39,9 @@ export default {
             }).done((response) => {
                 this.releases = JSON.parse(response).releases;
             })
+        },
+        getDecryptedString: function (data) {
+            return this.$CryptoJS.AES.decrypt(data, this.password).toString(this.$CryptoJS.enc.utf8)
         }
     },
     mounted () {
